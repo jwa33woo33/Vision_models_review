@@ -21,10 +21,19 @@
 
 # VGGNet
 
+### VggNet Overall architecture
+
 ![](./img/vgg16.png)
+
+### VggNet Table
+
+![](./img/vggnet_table.png)
 
 
 # depth
+
+
+### Meaning of depth
 
 ![](./img/depth.png)
 
