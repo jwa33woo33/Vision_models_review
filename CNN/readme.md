@@ -22,3 +22,13 @@
 # VGGNet
 
 ![](./img/vgg16.png)
+
+
+# depth
+
+![](./img/depth.png)
+
+## GoogleNet
+![](./img/googlenet.png)
+
+
