@@ -1,9 +1,9 @@
 <!-- <div align=center> -->
 
-### Evolution history of deep CNNs
+# Evolution history of deep CNNs
 ![](./img/evolution_history_of_deep_CNNs.png)
 
-### Top 10 CNN architectures
+# Top 10 CNN architectures
 ![](./img/top10_CNN_architectures.png)
 
 
@@ -168,7 +168,13 @@ To sum up VggNet,
 ![](./img/plain-networks-training-results-770x272.png)
 
 ### Overview
+![](./img/resnet.png)
 
 - The ResNet author experimented to see what happens when the network gets deeper. They conducted a comparative test between 20-layer and 56-layer and found that 56-layer had worse results
 - ResNet authors tried to highlight the side effects of gradient vanishing/exploding or degradation when the network is deepened.
 
+
+
+
+### Residual Block
+![](./img/skip_connection.png)
