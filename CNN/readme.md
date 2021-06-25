@@ -115,13 +115,34 @@ To sum up AlexNet,
 - Used only 3x3 kernel to reduce the number of parameters(based on experiment result, it gives faster speed and better performance)
 - VGGNet network is very simple. However, it still has 122 million parameters because there are 3 fc layers at the end of network.
 
-
 ![](./img/vggnet_layers.png)
-
 
 ### VggNet Table
 
 ![](./img/vggnet_table.png)
+
+To sum up VggNet,
+
+** Relu is always applied except for the layer16
+
+- [224x224x3] INPUT
+- [224x224x64] Layer1: 64 3x3x3 filters at zero padding 1, stride 1
+- [224x224x64] Layer2: 64 3x3x64 filters at zero padding 1, feature map is reduced to 112x112x64 by applying 2x2 max pooling to stride 2.
+- [112x112x128] Layer3: 128 3x3x64 filter.
+- [112x112x128] Layer4: 3x3x128 filter. Then apply 2x2 max pooling as stride 2.
+- [56x56x256] Layer5: 3x3x128 filter.
+- [56x56x256] Layer6: Convolves the feature map with 256 3x3x256 filter.
+- [56x56x256] Layer7: Convolves the feature map with 256 3x3x256 filter. Then apply 2 x 2 max pooling as stride 2. The size of the feature map has been reduced to 28x28x256.
+- [28x28x512] Layer8 : 3x3x256 filter.
+- [28x28x512] Layer9: 3x3x512 filter.
+- [28x28x512] Layer10: 3x3x512 filter. Then apply 2 x 2 max pooling as stride 2. The size of the feature map is reduced to 14x14x512.
+- [14x14x512] Layer11: 3x3x512 filter kernels.
+- [14x14x512] Layer12: 3x3x512 filter kernels.
+- [14x14x512] Layer13: 3x3x512 filter kernels. Then apply 2 x 2 max pooling as stride 2. The size of the feature map is reduced to 7x7x512.
+- [7x7x512=25088] Layer14 (fc1): Flatten(Reshape) the 7x7x512 feature map. Dropout is applied during training.
+- [4096] Layer15 (fc2): It consists of 4096 neurons. It is fully connected to 4096 neurons in the fc1 layer. Dropout is applied during training.
+- [1000] Layer16 (fc3): Consists of 1000 neurons. Fully connected to 4096 neurons in the fc2 layer. The outputs are activated with the softmax function.
+
 
 ### VGGNet experiment result
 ![](./img/vggnet_results_multi_scale.png)
