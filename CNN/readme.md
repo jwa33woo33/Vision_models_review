@@ -43,14 +43,30 @@ Size description: [CxWxH]
 - AlexNet has 8 layers(5 conv layers + 3 fc layers)
 - The Network has parallel structure to perform parallel operations with 2 GPUs.
 - AlexNet uses input size is [3x227x227]
-- Used ReLU activation function()
-- Used ImageNet data(contains 1000 classes)
-- Used LRN(Local Response Normalization)
-- Overlapping pooling(pools 2x3 areas in units of 2 pixels and overlaps them to avoid overfitting issue)
-- Data Augmentation(Increase number of images to avoid overfitting)
+- Trained with ImageNet data(contains 1000 classes)
+
+### Important things
+1. ReLU activation function
+![](./img/activation_functions.png)
+- As the activation function, the ReLU function was used instead of the Tanh function used in LeNet-5. It is said to be six times faster than using Tanh while maintaining the same accuracy. After AlexNet, it is preferred to use the ReLU function as the activation function.
+
+2. LRN(Local Response Normalization)
+
+3. Overlapping pooling(pools 2x3 areas in units of 2 pixels and overlaps them to avoid overfitting issue)
+![](./img/overlapping_pooling.png)
+- The role of pooling in CNN is to reduce the size of feature maps obtained through convolution. In the case of LeNet-5, average pooling was used, whereas, in AlexNet, max pooling was used. Also, in the case of LeNet-5, overlapping pooling was applied to make the stride, which is the stride length of the pooling kernel, smaller than the kernel size. Therefore, to be precise, LeNet-5 uses non-overlapping average pooling, and AlexNet uses overlapping maximum pooling.
+
+4. Dropout(To avoid overfitting)
+![](./img/dropout.png)
+- Dropout was used to prevent over-fitting. Dropout refers to learning while omitting some of the neurons of the fc layer. Change the values of some neurons to 0. Therefore, the neurons have no effect on forward pass and backpropagation. Dropout is applied during training, and all neurons are used during testing.
+
+
+5. Data Augmentation(Increase number of images to avoid overfitting)
     1. Randomly crop a 227x227 image from a 256x256 image
     2. change RGB channel value
-- Dropout(To avoid overfitting)
+![](./img/crop_augmentation.png)
+![](./img/rgb_augmentation.png)
+
 
 
 To sum up AlexNet,
