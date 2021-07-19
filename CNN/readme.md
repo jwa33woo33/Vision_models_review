@@ -165,16 +165,26 @@ To sum up VggNet,
 
 # ResNet
 
-![](./img/plain-networks-training-results-770x272.png)
-
 ### Overview
 ![](./img/resnet.png)
 
 - The ResNet author experimented to see what happens when the network gets deeper. They conducted a comparative test between 20-layer and 56-layer and found that 56-layer had worse results
 - ResNet authors tried to highlight the side effects of gradient vanishing/exploding or degradation when the network is deepened.
 
+![](./img/plain-networks-training-results-770x272.png)
 
 
-
-### Residual Block
+### Residual Block(Skip connection)
 ![](./img/skip_connection.png)
+
+
+# MobileNet V1
+
+### Overview
+![](./img/mobilenet_preview.png)
+
+
+- MobileNet v1 is created with the motivation to create a lightweight model that can be served on mobile devices and embedded vision application.
+
+- The keypoint of MobileNet 
+
