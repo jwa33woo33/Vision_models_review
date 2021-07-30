@@ -188,3 +188,15 @@ To sum up VggNet,
 
 - The keypoint of MobileNet 
 
+
+### MobileNet Architecture
+![](./img/mobilenet.png)
+
+
+### 
+
+### MobileNet Hayer Parameters
+
+1. Width Multiplier: Thinner Models
+
+2. Resolution Multiplier: Reduced Representation
