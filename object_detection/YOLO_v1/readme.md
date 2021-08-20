@@ -45,5 +45,5 @@ Among many of those bboxes, since the cell at the center of the object usually c
 Finally, objects in the image can be detected through a non-max suppression process that remove(based on low confidence score) redundant bounding boxes.
 
 ---
-![](./img/after_yolo_infer.png)
+![](./img/yolo_performance.png)
 
