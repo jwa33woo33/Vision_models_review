@@ -17,3 +17,5 @@
 
 
 * ### [Instance Segmentation]
+
+* ### [Vision Transformer]
