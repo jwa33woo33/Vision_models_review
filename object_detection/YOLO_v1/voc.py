@@ -111,13 +111,6 @@ class VOCDataset(Dataset):
         return self.num_samples
 
     def encode(self, boxes, labels):
-        """ Encode box coordinates and class labels as one target tensor.
-        Args:
-            boxes: (tensor) [[x1, y1, x2, y2]_obj1, ...], normalized from 0.0 to 1.0 w.r.t. image width/height.
-            labels: (tensor) [c_obj1, c_obj2, ...]
-        Returns:
-            An encoded tensor sized [S, S, 5 x B + C], 5=(x, y, w, h, conf)
-        """
 
         S, B, C = self.S, self.B, self.C
         N = 5 * B + C
